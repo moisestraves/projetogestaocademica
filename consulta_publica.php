@@ -15,30 +15,23 @@
 
 </header>
 
-
-<div class="logo">
-
-<img src="consultabanner1.jpeg"  alt="imagem">
-</div>
-<body>
-
-
-
-
-
 <div class="container">
-<h5 class="text-center text-uppercase fs-6 text  ">Entre com os dados para efetuar a consulta</h5>
 
-<form method="GET" action="consultardiploma.php">
-<div class="mb-3">
- 
-  <input class="form-control form-control-sm" type="search" class="form-control" id="dados"  name="q" placeholder="Digite Nome do Aluno ou CPF" required>
- 
-</div>
-<button class="btn-outline"type="submit" name="consultar">CONSULTAR</button>
+
+
+
+<form class="row g-3" method="GET" action="consultardiploma.php">
+ <div class="col-md-12">
+ <input  type="search" class="form-control" id="dados"  name="termo" placeholder="Digite Nome do Aluno ou CPF" required>
+ </div>
+ <div>
+ <button type="submit" class="btn btn-primary btn-sm">Pesquisar</button>
+
+ </div>
 
 </form>
 
+</div>
 <footer>
 
 </footer>

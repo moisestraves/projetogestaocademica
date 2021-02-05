@@ -104,5 +104,58 @@ function lerUsuarios($conexao){
     return $usuarios;
 }
 
+function cad_Diploma($conexao,$docaluno,$nome,$curso,$emecCurso,$nomeFexp,$emecFexp,$nomeFregistro,$emecFregistro,$datainicialCurso,$datafinalCurso,$dataregistroDiploma, $dataColacao, $dataRegistroDou, $processoNumero, $registroDiplomaNumero, $numeroLivro,$numeroFolha){
+
+    $insertDiploma = " INSERT INTO diploma (cpf,nome ,curso ,emecCurso ,nomeFexp ,
+    emecFexp ,nomeFregistro ,emecFregistro ,datainicialCurso ,datafinalCurso ,dataregistroDiploma ,
+    dataColacao ,dataRegistroDou ,processoNumero ,	registroDiplomaNumero, numeroLivro ,numeroFolha ) VALUES ('$docaluno','$nome','$curso','$emecCurso','$nomeFexp','$emecFexp','$nomeFregistro','$emecFregistro','$datainicialCurso','$datafinalCurso','$dataregistroDiploma', '$dataColacao', '$dataRegistroDou','$processoNumero',' $registroDiplomaNumero', '$numeroLivro','$numeroFolha')";
+    $exeInsertDiploma = mysqli_query($conexao,$insertDiploma);
+
+    return $exeInsertDiploma;
+}
+
+function consulta($conexao){
+
+//date_format(dataregistroDiploma,'%d/%m/%Y') dataregistroDiploma Formtação da data no mysql
+
+$sqlDiploma = "SELECT cpf,nome,curso, date_format(dataregistroDiploma,'%d/%m/%Y') dataregistroDiploma FROM  diploma  ORDER BY dataregistroDiploma ";
+    
+$resulUsuario = mysqli_query($conexao,$sqlDiploma );
+
+//Aqui foi criado um array  que vou usar para guardas os dados da query
+$usuarios = array();
+
+
+while ($usuario = mysqli_fetch_assoc($resulUsuario)) {
+   
+    $usuarios[] = $usuario;
+}
+
+return $usuarios;
+
+}
+
+function updateRegistro($conexao,$id){
+
+    //date_format(dataregistroDiploma,'%d/%m/%Y') dataregistroDiploma Formtação da data no mysql
+    
+    $sqlDiploma = "SELECT * FROM  diploma where cpf='$id' LIMIT 1";
+        
+    $resulUsuario = mysqli_query($conexao,$sqlDiploma );
+    
+    //Aqui foi criado um array  que vou usar para guardas os dados da query
+    $usuarios = array();
+    
+    
+    while ($usuario = mysqli_fetch_assoc($resulUsuario)) {
+       
+        $usuarios[] = $usuario;
+    }
+    
+    return $usuarios;
+    
+    }
+
+
 
 ?>

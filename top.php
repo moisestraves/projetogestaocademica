@@ -18,6 +18,6 @@
 
 <div class="logo">
 
-<img src="consultabanner1.jpeg"  alt="imagem">
+
 </div>
 <body>
