@@ -19,7 +19,7 @@ if (empty($_SESSION['id'])) {
 
 
     <form method="POST" action="#">
-        <h5 class="text-center text-uppercase text-dark bg-white"> Relatório de Usuários</h5>
+        <h5 class="text-center text-uppercase text-dark bg-white">Diplomas registrados</h5>
 
         <table class="table text-center table-hover table-sm table-light ">
             <thead class="thead-light  text-uppercase">

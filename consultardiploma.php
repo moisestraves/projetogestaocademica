@@ -41,7 +41,7 @@ if($ListarRegistros ==null){
     <div class="form">
     <form class="row g-3" action="adm/processa-cadastro-diploma.php" method="POST">
     <section class="test">  
-      <p class="text-center">Diplomas Registrado</p>
+      <p class="text-center">Informações do Diploma</p>
       </section>
 
       <div class="col-md-12">

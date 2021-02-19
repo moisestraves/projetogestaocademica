@@ -4,8 +4,6 @@ require 'conexao.php'; //Config configuração da conexão do banco usuário e i
 //Funcion para cadastrar 
 function cadUsuario($conexao, $cpf, $nome, $email, $departamento, $stausUsuario, $perfil, $senha)
 {
-
-
     $SqlCadastro = "INSERT INTO usuario (cpf,nome,email,departamento,perfil,ativo,senha) VALUES('$cpf','$nome','$email','$departamento','$stausUsuario','$perfil','$senha')";
 
     $exeCadastro = mysqli_query($conexao, $SqlCadastro);
@@ -20,13 +18,9 @@ function cadUsuario($conexao, $cpf, $nome, $email, $departamento, $stausUsuario,
         header('location:cadastro.php');
     }
 }
-
-
-
 //Function Processa Login do Usuário no Sistema
 function logarUsuario($conexao, $login, $senha)
 {
-
     // SELECT DO LOGIN E SENHA DO USUÁRIO
     $queryLogin = "SELECT * FROM usuario WHERE email ='$login' && senha = '$senha' LIMIT 1";
 
@@ -95,7 +89,7 @@ function lerUsuarios($conexao)
 
     return $usuarios;
 }
-
+//Function Insert Register
 function cad_Diploma($conexao, $docaluno, $nome, $curso, $emecCurso, $nomeFexp, $emecFexp, $nomeFregistro, $emecFregistro, $datainicialCurso, $datafinalCurso, $dataregistroDiploma, $dataColacao, $dataRegistroDou, $processoNumero, $registroDiplomaNumero, $numeroLivro, $numeroFolha)
 {
 
@@ -131,7 +125,7 @@ function consulta($conexao)
 function updateRegistro($conexao, $id)
 {
 
-    //date_format(dataregistroDiploma,'%d/%m/%Y') dataregistroDiploma Formtação da data no mysql
+    //date_format(dataregistroDiploma,'%d/%m/%Y') dataregistroDiploma Formatação da data no mysql
 
     $sqlDiploma = "SELECT * FROM  diploma where cpf='$id' LIMIT 1";
 
@@ -147,6 +141,22 @@ function updateRegistro($conexao, $id)
     }
 
     return $usuarios;
+}
+//Funcion delete registro diploma conforme o id
+function deletDiploma($conexao, $doc)
+{
+
+    $deletDiploma = "DELETE FROM diploma where cpf ='$doc' LIMIT 1";
+
+    $sql = mysqli_query($conexao, $deletDiploma);
+
+    if ($sql > 0) {
+
+        header('location:../listar-diplomas.php');
+    } else {
+
+        echo "Nenhum Registro removido ";
+    }
 }
 
 //Funcion que lista todos os diplomas registrados
@@ -164,5 +174,5 @@ function ler($conexao)
         $usuarios[] = $usuario;
     }
 
-    return($usuarios);
+    return ($usuarios);
 }
