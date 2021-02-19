@@ -46,8 +46,8 @@ if(empty($_SESSION['id'])){
             <td><?= $usuario['email'];?></td>
             <td><?= $usuario['departamento'];?></td>
 
-            <td><a href="editar-usuario.php?id=<?=$usuario['codusuario']; ?>" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Editar</a></td>
-            <td><a href="excluir-usuario.php?id=<?=$usuario['codusuario']; ?>" class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Remover</a></td>
+            <td><a href="editar-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Editar</a></td>
+            <td><a href="excluir-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Remover</a></td>
             </tr>
             
            
