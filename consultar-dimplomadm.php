@@ -1,7 +1,9 @@
 <?php
 require 'top.php';
 require 'adm/funcsistema.php';
-//Recebendo o registro para pesquisar Nome ou CPF do Aluno
+
+
+//Recebendo o registro para pesquisar Cpf do Aluno
 
 $doc_Aluno = $_GET['id'];
 
@@ -10,6 +12,8 @@ $doc_Aluno = $_GET['id'];
 <?php
 
 $ListarRegistros = updateRegistro($conexao, $doc_Aluno);
+
+//var_dump($ListarRegistros);
 
 if ($ListarRegistros == null) {
 
@@ -49,8 +53,10 @@ if ($ListarRegistros == null) {
                     <input class="form-control form-control-sm" type="text" class="form-control" name="nomedoaluno" value="<?php echo $ListarRegistros[0]['nome']; ?> " readonly>
                 </div>
                 <div class="col-md-3">
+                    <!--Campo Hidden-->
+                    <input type="hidden" name="id" value="<?php echo $ListarRegistros['cpf']; ?>">
                     <label for="formGroupExampleInput" class="form-label text-uppercase ">RG</label>
-                    <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" value="<?php echo $ListarRegistros[0]['cpf']; ?>" readonly>
+                    <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" value="<?php echo $ListarRegistros[0]['cpf']; ?>">
                 </div>
                 <div class="col-md-6">
                     <label for="formGroupExampleInput" class="form-label text-uppercase ">curso</label>
@@ -115,7 +121,9 @@ if ($ListarRegistros == null) {
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="numFolha" value="<?php echo $ListarRegistros[0]['numeroFolha']; ?>" readonly>
                 </div>
                 <div class="col-md-12">
-                    <a href="adm/editar-diploma.php" class="btn btn-outline-primary" role="button" aria-pressed="true">Editar</a>
+
+                    <a href="adm/editar-diploma.php?id=<?= $ListarRegistros[0]['cpf']; ?>" class="btn btn-outline-primary" role="button" aria-pressed="true">Editar</a>
+                    <a href="adm/excluir-diploma.php?id=<?= $ListarRegistros[0]['cpf']; ?>" class="btn btn-danger" role="button" aria-pressed="true">Excluir Registro</a>
                 </div>
             </form>
 
@@ -126,5 +134,3 @@ if ($ListarRegistros == null) {
 </body>
 
 </html>
-
-?>

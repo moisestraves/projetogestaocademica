@@ -3,22 +3,14 @@ session_start();
 require '../topoadm.php';
 require 'funcsistema.php';
 
-
-
-
 if (empty($_SESSION['id'])) {
 
   header('location:../login.php');
 }
-
+//Inserir os Dados do Hidden Para Pegar as Informações do Usuário Para Edição
 $id_diploma = $_GET['id'];
-
+/*Chama da Query Consulta de Registro */
 $ListarRegistros = updateRegistro($conexao, $id_diploma);
-
-
-
-
-//var_dump($id_diploma);
 
 ?>
 
@@ -31,7 +23,7 @@ $ListarRegistros = updateRegistro($conexao, $id_diploma);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" type="text" href="./css/main.css">
-  <title>SIS-GENESIS SISTEMA DE GESTÃO</title>
+ 
 </head>
 
 <body>
@@ -40,7 +32,7 @@ $ListarRegistros = updateRegistro($conexao, $id_diploma);
   <div class="container">
 
     <div class="form">
-      <form class="row g-3" action="adm/processa-cadastro-diploma.php" method="POST">
+      <form class="row g-3" action="update-registrodiploma.php" method="POST">
         <section class="test">
           <p class="text-center">Formulário de Registro do Diploma</p>
         </section>
