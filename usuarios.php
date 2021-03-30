@@ -4,13 +4,13 @@ require 'adm/conexao.php';
 
 require 'adm/funcsistema.php';
 
-require  'topoadm.php';
+require  'topoadm.php';/*topo da Página Administrativa*/
 
 
 
 if(empty($_SESSION['id'])){
 
-    header('location:login.php');                                                                                                                                                  
+    header('location:index.php');                                                                                                                                                  
 
 }
 

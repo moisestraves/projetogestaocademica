@@ -55,7 +55,7 @@ function logarUsuario($conexao, $login, $senha)
     } else {
 
 
-        header('location:login.php');
+        header('location:index.php');
     }
 }
 
@@ -155,7 +155,7 @@ function deletDiploma($conexao, $doc)
         header('location:../listar-diplomas.php');
     } else {
 
-        echo "Nenhum Registro removido ";
+        echo "Não Foi Localizado Dados Para Remoção ! ";
     }
 }
 
