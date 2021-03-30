@@ -57,7 +57,7 @@ if ($ListarRegistros == null) {
                     <!--Campo Hidden-->
                     <input type="hidden" name="id" value="<?php echo $ListarRegistros['cpf']; ?>">
                     <label for="formGroupExampleInput" class="form-label text-uppercase ">RG</label>
-                    <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" value="<?php echo $ListarRegistros[0]['cpf']; ?>">
+                    <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" value="<?php echo $ListarRegistros[0]['cpf']; ?>"readonly>
                 </div>
                 <div class="col-md-6">
                     <label for="formGroupExampleInput" class="form-label text-uppercase ">curso</label>
