@@ -1,4 +1,5 @@
 <?php
+require 'funcsistema.php';
     //Criar a função de Update do Registro do Diploma
 
 $docaluno = $_POST['doc']; //<-Número do documento do aluno.
@@ -20,7 +21,20 @@ $numeroLivro = $_POST['numLivro'];
 $numeroFolha = $_POST['numFolha'];
 
 
-$updateRegistro= updateRegistro($conexao,$docaluno,$nome,$curso,$emecCurso,$nomeFexp,$emecFexp,$nomeFregistro,$emecFregistro,$datainicialCurso,$datafinalCurso,
-$dataregistroDiploma, $dataColacao, $dataRegistroDou, $processoNumero, $registroDiplomaNumero, $numeroLivro,$numeroFolha);
+$atualizar = "UPDATE diploma SET cpf='$docaluno', nome='$nome', curso='$curso', emecCurso ='$emecCurso',
+nomeFexp='$nomeFexp',emecFexp='$emecFexp',nomeFregistro='$nomeFregistro',emecFregistro='$emecFregistro',datainicialCurso='$datainicialCurso',datafinalCurso='$datafinalCurso',dataregistroDiploma='$dataregistroDiploma',dataColacao='$dataColacao',dataRegistroDou='$dataRegistroDou',processoNumero='$processoNumero',
+registroDiplomaNumero='$registroDiplomaNumero',numeroLivro='$numeroLivro',numeroFolha='$numeroFolha' WHERE cpf='$docaluno'";
+
+$sqlUpdate = mysqli_query($conexao,$atualizar);
+
+if($sqlUpdate > 0){
+
+    header('location:../listar-diplomas.php');
+}else {
+
+    echo"Upadate Negado ";
+}
+
+
        
 ?>

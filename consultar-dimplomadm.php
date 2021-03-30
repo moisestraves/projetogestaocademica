@@ -12,7 +12,7 @@ $doc_Aluno = $_GET['id'];
 
 <?php
 
-$ListarRegistros = updateRegistro($conexao, $doc_Aluno);
+$ListarRegistros = consultaRegistro($conexao, $doc_Aluno);
 
 //var_dump($ListarRegistros);
 

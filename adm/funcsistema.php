@@ -101,6 +101,29 @@ function cad_Diploma($conexao, $docaluno, $nome, $curso, $emecCurso, $nomeFexp, 
     return $exeInsertDiploma;
 }
 
+/*Function que faz atualização dos registro caso seja solicitada pelo usuário Administrativo
+function updateRegistro($conexao, $docaluno, $nome, $curso, $emecCurso, $nomeFexp, $emecFexp, $nomeFregistro, $emecFregistro, $datainicialCurso, $datafinalCurso, $dataregistroDiploma, $dataColacao, $dataRegistroDou, $processoNumero, $registroDiplomaNumero, $numeroLivro, $numeroFolha)
+{
+
+    $updateDiploma = " UPDATE  diploma SET (cpf,nome ,curso ,emecCurso ,nomeFexp ,
+    emecFexp ,nomeFregistro ,emecFregistro ,datainicialCurso ,datafinalCurso ,dataregistroDiploma ,
+    dataColacao ,dataRegistroDou ,processoNumero ,	registroDiplomaNumero, numeroLivro ,numeroFolha ) VALUES ('$docaluno','$nome','$curso','$emecCurso','$nomeFexp','$emecFexp','$nomeFregistro','$emecFregistro','$datainicialCurso','$datafinalCurso','$dataregistroDiploma', '$dataColacao', '$dataRegistroDou','$processoNumero',' $registroDiplomaNumero', '$numeroLivro','$numeroFolha')";
+    $exeUpdateDiploma = mysqli_query($conexao, $updateDiploma);
+
+
+    if($exeUpdateDiploma >=1){
+
+        echo"Registro Atualizado com Sucesso ";
+
+    }else{
+
+        var_dump($exeUpdateDiploma);
+    }
+    
+    
+
+
+}*/
 function consulta($conexao)
 {
 
@@ -122,7 +145,7 @@ function consulta($conexao)
     return $usuarios;
 }
 
-function updateRegistro($conexao, $id)
+function consultaRegistro($conexao, $id)
 {
 
     //date_format(dataregistroDiploma,'%d/%m/%Y') dataregistroDiploma Formatação da data no mysql

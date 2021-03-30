@@ -9,8 +9,8 @@ if (empty($_SESSION['id'])) {
 }
 //Inserir os Dados do Hidden Para Pegar as Informações do Usuário Para Edição
 $id_diploma = $_GET['id'];
-/*Chama da Query Consulta de Registro */
-$ListarRegistros = updateRegistro($conexao, $id_diploma);
+/*Aqui é chamada novamente os dados do registro com permissão de edição*/
+$ListarRegistros = consultaRegistro($conexao, $id_diploma);
 
 ?>
 

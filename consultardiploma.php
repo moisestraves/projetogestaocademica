@@ -10,7 +10,7 @@ $dadosAluno = $_GET['termo'];
 
 
 
-$ListarRegistros = updateRegistro($conexao,$dadosAluno);
+$ListarRegistros = consultaRegistro($conexao,$dadosAluno);
 
 if($ListarRegistros ==null){
 
