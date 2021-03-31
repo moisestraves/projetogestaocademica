@@ -86,6 +86,21 @@ function deletarUsuario($conexao, $login)
     }
 }
 
+//Function date user Select Usuário 
+function selectUsuario($conexao,$login){
+
+    $selecUsuario = "SELECT cpf,nome,email,perfil FROM  usuario where cpf='$login' LIMIT 1";
+
+    $exeUsuario = mysqli_query($conexao,$selecUsuario);
+    $dados = array();
+    
+    foreach ($exeUsuario as $infoUser){
+        $dados[ ]= $infoUser;
+        
+    }
+return $dados;
+    
+}
 //Funcion que lista todos os usuários do sistemas
 function lerUsuarios($conexao)
 {
