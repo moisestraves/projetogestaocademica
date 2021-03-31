@@ -10,7 +10,7 @@ require  'topoadm.php';
 
 if (empty($_SESSION['id'])) {
 
-    header('location:login.php');
+    header('location:index.php');
 }
 
 ?>
@@ -42,7 +42,7 @@ if (empty($_SESSION['id'])) {
                     <td><?= $diplomas['cpf']; ?></td>
                     <td><?= $diplomas['curso']; ?></td>
 
-                    <td><a href="consultar-dimplomadm.php?id=<?= $diplomas['cpf']; ?>"target="black" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Consultar</a></td>
+                    <td><a href="consultar-dimplomadm.php?id=<?= $diplomas['cpf']; ?>" target="black" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Consultar</a></td>
 
                 </tr>
 
@@ -52,7 +52,13 @@ if (empty($_SESSION['id'])) {
 
         </table>
 
+        <div class="nav justify-content-end">
+            <a class="nav justify-content-end " href="paineladm.php">
+
+                <img src="icones/voltar.png" width="5%" alt="Clique Para Voltar">
+            </a>
+        </div>
 
     </form>
-<?php
+    <?php
     require 'rodape.php';

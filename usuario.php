@@ -15,7 +15,7 @@ require 'adm/funcsistema.php';
  $senha= $_POST['senha'];
 
  
-
+ //Aqui a função é chamada para executar o cadastrado do usuáruio novo   
  $cadastrarUsuario = cadUsuario($conexao,$cpf,$nome,$email,$departamento,$stausUsuario,$perfil,$senha);
 
 

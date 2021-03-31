@@ -69,6 +69,22 @@ function atualizaLogin($conexao, $id)
     //echo($resultado);
 
 }
+//Function call delete User 
+function deletarUsuario($conexao, $login)
+{
+
+    $excluirUsuario = "DELETE FROM usuario where cpf='$login' LIMIT 1";
+
+    $exeDeletarLogin = mysqli_query($conexao, $excluirUsuario);
+
+    if ($exeDeletarLogin > 0) {
+
+        header('location:../usuarios.php');
+    } else {
+
+        echo "Não Foi Localizado Dados Para Remoção  ";
+    }
+}
 
 //Funcion que lista todos os usuários do sistemas
 function lerUsuarios($conexao)
@@ -101,29 +117,7 @@ function cad_Diploma($conexao, $docaluno, $nome, $curso, $emecCurso, $nomeFexp, 
     return $exeInsertDiploma;
 }
 
-/*Function que faz atualização dos registro caso seja solicitada pelo usuário Administrativo
-function updateRegistro($conexao, $docaluno, $nome, $curso, $emecCurso, $nomeFexp, $emecFexp, $nomeFregistro, $emecFregistro, $datainicialCurso, $datafinalCurso, $dataregistroDiploma, $dataColacao, $dataRegistroDou, $processoNumero, $registroDiplomaNumero, $numeroLivro, $numeroFolha)
-{
 
-    $updateDiploma = " UPDATE  diploma SET (cpf,nome ,curso ,emecCurso ,nomeFexp ,
-    emecFexp ,nomeFregistro ,emecFregistro ,datainicialCurso ,datafinalCurso ,dataregistroDiploma ,
-    dataColacao ,dataRegistroDou ,processoNumero ,	registroDiplomaNumero, numeroLivro ,numeroFolha ) VALUES ('$docaluno','$nome','$curso','$emecCurso','$nomeFexp','$emecFexp','$nomeFregistro','$emecFregistro','$datainicialCurso','$datafinalCurso','$dataregistroDiploma', '$dataColacao', '$dataRegistroDou','$processoNumero',' $registroDiplomaNumero', '$numeroLivro','$numeroFolha')";
-    $exeUpdateDiploma = mysqli_query($conexao, $updateDiploma);
-
-
-    if($exeUpdateDiploma >=1){
-
-        echo"Registro Atualizado com Sucesso ";
-
-    }else{
-
-        var_dump($exeUpdateDiploma);
-    }
-    
-    
-
-
-}*/
 function consulta($conexao)
 {
 
@@ -165,6 +159,7 @@ function consultaRegistro($conexao, $id)
 
     return $usuarios;
 }
+
 //Funcion delete registro diploma conforme o id
 function deletDiploma($conexao, $doc)
 {

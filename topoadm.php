@@ -10,6 +10,6 @@
 <!--Cabeçalho da Pagina Inicial do  Sistema-->
 <header>
 <h1 class="text-center  fs-5 text">Sistema de Gestão Acadêmico </h1>
-<h2 class="text-center fs-4 text">FAMP-Faculdade Marinho Paulista</h2>
+<p class="text-center fs-4 text">Seu logo Aqui !</p>
 
 </header>

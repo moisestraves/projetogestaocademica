@@ -3,7 +3,7 @@ require 'topoadm.php';
 session_start();
 if (empty($_SESSION['id'])) {
 
-    header('location:login.php');
+    header('location:index.php');
 }
 
 

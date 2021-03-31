@@ -11,7 +11,7 @@
 <!--Cabeçalho da Pagina Inicial do  Sistema-->
 <header>
 <h1 class="text-center  fs-5 text">Consulta Pública de Diplomas </h1>
-<h2 class="text-center fs-4 text">FAMP-Faculdade Marinho Paulista</h2>
+<h2 class="text-center fs-4 text">Seu Logo Aqui !  </h2>
 
 </header>
 

@@ -46,8 +46,8 @@ if(empty($_SESSION['id'])){
             <td><?= $usuario['email'];?></td>
             <td><?= $usuario['departamento'];?></td>
 
-            <td><a href="editar-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Editar</a></td>
-            <td><a href="excluir-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Remover</a></td>
+            <td><a href="adm/editar-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Editar</a></td>
+            <td><a href="adm/excluir-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Remover</a></td>
             </tr>
             
            
@@ -58,3 +58,10 @@ if(empty($_SESSION['id'])){
       
  
     </form>
+    
+<div class="nav justify-content-end">
+<a class="nav justify-content-end " href="paineladm.php"  > 
+	
+<img src="icones/voltar.png" width="8%" alt="Clique Para Voltar" >
+</a> 
+</div>
