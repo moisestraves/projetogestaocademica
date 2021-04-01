@@ -20,6 +20,7 @@ if(empty($_SESSION['id'])){
         
 
     <form  method="POST" action="#">
+    
     <h5 class="text-center text-uppercase text-dark bg-white"> Relatório  de Usuários</h5>
 
         <table class="table text-center table-hover table-sm table-light " >
@@ -28,6 +29,7 @@ if(empty($_SESSION['id'])){
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">Departamento</th>
+                <th scope="col">Ativo</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Deletar</th>
                </tr>
@@ -45,6 +47,7 @@ if(empty($_SESSION['id'])){
             <td><?= $usuario['nome'];?></td>
             <td><?= $usuario['email'];?></td>
             <td><?= $usuario['departamento'];?></td>
+            <td><?= $usuario['ativo'];?></td>
 
             <td><a href="adm/editar-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Editar</a></td>
             <td><a href="adm/excluir-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Remover</a></td>
@@ -56,7 +59,7 @@ if(empty($_SESSION['id'])){
 
         </table>
       
- 
+        <p class="text-center" >O Campo Ativo é o Status do Perfil do Usuário 1 = Ativo e 2 = Inativo</p>
     </form>
     
 <div class="nav justify-content-end">

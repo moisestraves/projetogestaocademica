@@ -89,7 +89,7 @@ function deletarUsuario($conexao, $login)
 //Function date user Select Usuário 
 function selectUsuario($conexao,$login){
 
-    $selecUsuario = "SELECT cpf,nome,email,perfil FROM  usuario where cpf='$login' LIMIT 1";
+    $selecUsuario = "SELECT cpf,nome,email,ativo,perfil FROM  usuario where cpf='$login' LIMIT 1";
 
     $exeUsuario = mysqli_query($conexao,$selecUsuario);
     $dados = array();
@@ -105,7 +105,7 @@ return $dados;
 function lerUsuarios($conexao)
 {
 
-    $sqlUsuario = 'SELECT nome,email,departamento ,cpf FROM  usuario  ORDER BY nome ';
+    $sqlUsuario = 'SELECT nome,email,departamento ,cpf ,ativo FROM  usuario  ORDER BY nome ';
 
     $resulUsuario = mysqli_query($conexao, $sqlUsuario);
 
