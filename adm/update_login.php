@@ -13,12 +13,9 @@ require 'funcsistema.php';
   $pfUsuario = $_POST['status'];
   $tipoPerfil = $_POST['perfil'];
 
-  var_dump($docUsuario);
-  var_dump($nomeUsuario);
-  var_dump($login);
-  var_dump($depUsuario);
-  var_dump($pfUsuario);
-  var_dump($tipoPerfil);
+ 
+  //Enviando as informações para Atualização do Login
+  updatUser($conexao,$docUsuario,$nomeUsuario, $login,$depUsuario,$pfUsuario,$tipoPerfil);
 }
 
 ?>

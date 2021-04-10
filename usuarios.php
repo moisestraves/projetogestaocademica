@@ -62,9 +62,5 @@ if(empty($_SESSION['id'])){
         <p class="text-center" >O Campo Ativo é o Status do Perfil do Usuário 1 = Ativo e 2 = Inativo</p>
     </form>
     
-<div class="nav justify-content-end">
-<a class="nav justify-content-end " href="paineladm.php"  > 
-	
-<img src="icones/voltar.png" width="8%" alt="Clique Para Voltar" >
-</a> 
+
 </div>

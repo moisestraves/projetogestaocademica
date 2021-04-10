@@ -69,6 +69,21 @@ function atualizaLogin($conexao, $id)
     //echo($resultado);
 
 }
+
+//Function Set User 
+function updatUser($conexao,$docUsuario, $nomeUsuario, $login,$depUsuario,$pfUsuario,$tipoPerfil){
+
+$sqlUpate = "UPDATE usuario SET nome='$nomeUsuario', email='$login' ,departamento='$depUsuario' ,ativo='$pfUsuario', perfil='$tipoPerfil' where cpf='$docUsuario'";
+$resultUpdate =mysqli_query($conexao,$sqlUpate);
+
+if($resultUpdate > 0){
+    header('location:../usuarios.php');
+
+}else {
+
+    echo "Nada para Atualizar";
+}
+}
 //Function call delete User 
 function deletarUsuario($conexao, $login)
 {
@@ -89,7 +104,7 @@ function deletarUsuario($conexao, $login)
 //Function date user Select Usuário 
 function selectUsuario($conexao,$login){
 
-    $selecUsuario = "SELECT cpf,nome,email,ativo,perfil FROM  usuario where cpf='$login' LIMIT 1";
+    $selecUsuario = "SELECT cpf,nome,email,ativo,perfil,departamento FROM  usuario where cpf='$login' LIMIT 1";
 
     $exeUsuario = mysqli_query($conexao,$selecUsuario);
     $dados = array();

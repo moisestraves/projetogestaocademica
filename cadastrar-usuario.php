@@ -81,6 +81,11 @@ if (empty($_SESSION['id'])) {
         <div class="col-md-12">
           <input class="btn btn-primary" type="submit" value="Cadastrar">
         </div>
+        <div class="nav justify-content-end">
+          <a class="nav justify-content-end " href="paineladm.php">
+
+            <img src="icones/voltar.png" width="8%" alt="Clique Para Voltar">
+          </a>
       </form>
     </div>
   </div>

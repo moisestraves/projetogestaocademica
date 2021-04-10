@@ -13,8 +13,6 @@ if (empty($_SESSION['id'])) {
 
 $dadosUsuario = selectUsuario($conexao, $logiEditar);
 
-
-
 ?>
 
 <div class="container">
@@ -35,35 +33,40 @@ $dadosUsuario = selectUsuario($conexao, $logiEditar);
         <label for="formGroupExampleInput2" class="form-label text-uppercase">E-mail</label>
         <input class="form-control form-control-sm" type="email" class="form-control" id="formGroupExampleInput2" name="email" value="<?php echo $dadosUsuario[0]['email']; ?>">
       </div>
+
       <div class="col-md-4">
         <label for="formGroupExampleInput2" class="form-label text-uppercase">Departamento</label>
         <select name="departamento" class="form-select" aria-label="Default select example " required>
-          <option selected>Departamento</option>
+          <option value="<?php echo $dadosUsuario[0]['departamento']; ?>"> <?php echo $dadosUsuario[0]['departamento']; ?> </option>
           <option value="Acadêmico"> Acadêmico </option>
           <option value="Administrativo"> Administrativo </option>
           <option value="Financeiro"> Financeiro </option>
           <option value="Secretaria">Secretaria</option>
-
+          <option value="Informática">Informática</option>
         </select>
 
 
       </div>
       <div class="col-md-4">
         <label for="formGroupExampleInput2" class="form-label text-uppercase">Ativar Usuário ?</label>
-        <select name="status" class="form-select" aria-label="Default select example" required>
-         <option value="1"<?php echo $dadosUsuario[0]['ativo']; ?>>S</option>
-          <option value="2"<?php echo $dadosUsuario[0]['ativo']; ?>>N</option>
+        <select name="status" class="form-select" aria-label="Default select example " required>
+          <option <option value="<?php echo $dadosUsuario[0]['ativo']; ?>"> <?php echo $dadosUsuario[0]['ativo']; ?> </option> ></option>
+          <option value="1">S</option>
+          <option value="2">N</option>
 
         </select>
+        <i class="text-center " >Usuário  1 = Login Ativo  2 = Login Inativo</i>
       </div>
       <div class="col-md-3">
         <label for="formGroupExampleInput2" class="form-label text-uppercase">Perfil ?</label>
         <select name="perfil" class="form-select" aria-label="Default select example " required>
-          <option selected>Tipo de Perfil</option>
+          <option <option value="<?php echo $dadosUsuario[0]['perfil']; ?>"> <?php echo $dadosUsuario[0]['perfil']; ?> </option> >l</option>
           <option value="1">Administrador</option>
           <option value="2">Usuário</option>
-
+          
         </select>
+        <i class="text-center " >Usuário  1 = Adm Sistema  2 = Usuário</i>
+
       </div>
 
       <div class="col-md-12">
