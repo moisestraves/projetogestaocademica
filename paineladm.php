@@ -20,7 +20,6 @@ if(empty($_SESSION['id'])){
 
 <div class="container">
 
-
 <h2 class="text-center">Painel Administrativo</h2>
 
 
@@ -35,12 +34,11 @@ if(empty($_SESSION['id'])){
 
 <div class="menu">
 <ul>
-<ol class="topomenu"> MENU</ol>
 <li><a href="#">Aluno</li>
-<li><a href="cadastrar-diploma.php "target="_self">Cadastrar Diploma</li>
+<li><a href="cadastrar-diploma.php "target="black">Cadastrar Diploma</li>
 <li><a href="listar-diplomas.php"target="_self">Consultar Diploma</li>
 <li><a href="cadastrar-usuario.php"target="_self">Cadastrar Usuário</li>
-<li><a href="usuarios.php" target="_top">Consultar Usuários</li>
+<li><a href="usuarios.php" target="_self">Consultar Usuários</li>
 </ul>
 
 

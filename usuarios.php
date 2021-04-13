@@ -1,66 +1,72 @@
  <?php
-session_start();
-require 'adm/conexao.php';
+    session_start();
+    require 'adm/conexao.php';
 
-require 'adm/funcsistema.php';
+    require 'adm/funcsistema.php';
 
-require  'topoadm.php';/*topo da Página Administrativa*/
+    require  'topoadm.php';/*topo da Página Administrativa*/
 
 
 
-if(empty($_SESSION['id'])){
+    if (empty($_SESSION['id'])) {
 
-    header('location:index.php');                                                                                                                                                  
+        header('location:index.php');
+    }
 
-}
-
- ?>
+    ?>
 
  <div class="container">
-        
 
-    <form  method="POST" action="#">
-    
-    <h5 class="text-center text-uppercase text-dark bg-white"> Relatório  de Usuários</h5>
 
-        <table class="table text-center table-hover table-sm table-light " >
-            <thead class="thead-light  text-uppercase">
-                <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Login</th>
-                <th scope="col">Departamento</th>
-                <th scope="col">Ativo</th>
-                <th scope="col">Editar</th>
-                <th scope="col">Deletar</th>
-               </tr>
-            </thead>
-            <?php
+     <form method="POST" action="#">
+
+         <h5 class="text-center text-uppercase text-dark bg-white"> Relatório de Usuários</h5>
+
+         <table class="table text-center table-hover table-sm table-light ">
+             <thead class="thead-light  text-uppercase">
+                 <tr>
+                     <th scope="col">Nome</th>
+                     <th scope="col">Login</th>
+                     <th scope="col">Departamento</th>
+                     <th scope="col">Ativo</th>
+                     <th scope="col">Editar</th>
+                     <th scope="col">Deletar</th>
+                 </tr>
+             </thead>
+             <?php
                 $ListarUsuario = lerUsuarios($conexao);
 
-                 //Laço de Controle da lista de usuários 
-                 foreach ($ListarUsuario as $usuario){
-                  
+                //Laço de Controle da lista de usuários 
+                foreach ($ListarUsuario as $usuario) {
+
 
                 ?>
-         
-            <tr>
-            <td><?= $usuario['nome'];?></td>
-            <td><?= $usuario['email'];?></td>
-            <td><?= $usuario['departamento'];?></td>
-            <td><?= $usuario['ativo'];?></td>
 
-            <td><a href="adm/editar-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Editar</a></td>
-            <td><a href="adm/excluir-usuario.php?id=<?=$usuario['cpf']; ?>" class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Remover</a></td>
-            </tr>
-            
-           
-            <?php
-    } ?> 
+                 <tr>
+                     <td><?= $usuario['nome']; ?></td>
+                     <td><?= $usuario['email']; ?></td>
+                     <td><?= $usuario['departamento']; ?></td>
+                     <td><?= $usuario['ativo']; ?></td>
 
-        </table>
-      
-        <p class="text-center" >O Campo Ativo é o Status do Perfil do Usuário 1 = Ativo e 2 = Inativo</p>
-    </form>
-    
+                     <td><a href="adm/editar-usuario.php?id=<?= $usuario['cpf']; ?>" class="btn btn-success btn-sm active" role="button" aria-pressed="true">Editar</a></td>
+                     <td><a href="adm/excluir-usuario.php?id=<?= $usuario['cpf']; ?>" class="btn btn-danger btn-sm active" role="button" aria-pressed="true">Remover</a></td>
+                 </tr>
 
-</div>
+
+             <?php
+                } ?>
+
+         </table>
+
+         <p class="text-center">O Campo Ativo é o Status do Perfil do Usuário 1 = Ativo e 2 = Inativo</p>
+         <!--Botão de Retorno Painel Administrador-->
+         <div class="nav justify-content-end">
+             <a class="nav justify-content-end " href="paineladm.php">
+
+                 <img src="icones/voltar.png" width="8%" alt="Clique Para Voltar">
+             </a>
+     </form>
+     </form>
+
+
+ </div>

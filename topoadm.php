@@ -10,6 +10,9 @@
 <!--Cabeçalho da Pagina Inicial do  Sistema-->
 <header>
 <h1 class="text-center  fs-5 text">Sistema de Gestão Acadêmico </h1>
-<p class="text-center fs-4 text">Seu logo Aqui !</p>
+<div>
+<img src="icones/logocentral.png " width="25%">
+</div>
+
 
 </header>
