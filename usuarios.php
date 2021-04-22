@@ -70,3 +70,8 @@
 
 
  </div>
+
+
+ <?php
+
+    require 'rodape.php';

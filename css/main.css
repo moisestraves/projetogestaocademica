@@ -19,7 +19,7 @@ body {
 
 header {
 
-    background-color: rgb(104, 168, 242);
+    background-color: rgb(134, 183, 238);
 }
 
 header h1 {
@@ -92,8 +92,17 @@ button {
 .menu li
  {
     text-decoration: none;
+    list-style-type: none;
+    display:inline;
+    padding: 10px 5px;
+    border-radius: 5px;
 }
-
+.menu{
+    margin:auto;
+    font-family:sans-serif;
+    font-size: 18px;
+    
+}
 .menu ul {
     margin-left: -0px;
     
