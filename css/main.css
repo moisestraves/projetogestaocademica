@@ -85,8 +85,8 @@ button {
 }
 
 .menu a:hover {
-    background-color: rgb(45, 197, 202);
-    color: white;
+    color: rgb(27, 215, 240);
+    font-size: small;
 }
 
 .menu li
@@ -94,8 +94,8 @@ button {
     text-decoration: none;
     list-style-type: none;
     display:inline;
-    padding: 10px 5px;
-    border-radius: 5px;
+    padding: 1px 5px;
+   
 }
 .menu{
     margin:auto;
