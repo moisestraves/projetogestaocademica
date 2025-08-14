@@ -32,7 +32,7 @@ if($sqlUpdate > 0){
     header('location:../listar-diplomas.php');
 }else {
 
-    echo"Upadate Negado ";
+    echo"Update Nao Realizado";
 }
 
 

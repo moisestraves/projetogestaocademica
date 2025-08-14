@@ -50,75 +50,75 @@ if ($ListarRegistros == null) {
 
                 <div class="col-md-12">
 
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">Nome</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Nome</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" name="nomedoaluno" value="<?php echo $ListarRegistros[0]['nome']; ?> " readonly>
                 </div>
                 <div class="col-md-3">
                     <!--Campo Hidden-->
                     <input type="hidden" name="id" value="<?php echo $ListarRegistros['cpf']; ?>">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">RG</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">RG</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" value="<?php echo $ListarRegistros[0]['cpf']; ?>"readonly>
                 </div>
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">curso</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">curso</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="curso" value="<?php echo $ListarRegistros[0]['curso']; ?>" readonly>
                 </div>
 
                 <div class="col-md-3">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">EMEC</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">EMEC</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="emeccurso" value="<?php echo $ListarRegistros[0]['emecCurso']; ?>" readonly>
                 </div>
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">Faculdade Expedição</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Faculdade Expedição</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="facexp" value="<?php echo $ListarRegistros[0]['nomeFexp']; ?>" readonly>
                 </div>
 
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">EMEC EXPEDIÇÃO</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">EMEC EXPEDIÇÃO</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="emecFexp" value="<?php echo $ListarRegistros[0]['emecFexp']; ?>" readonly>
                 </div>
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">Faculdade Registro</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Faculdade Registro</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="facregistro" value="<?php echo $ListarRegistros[0]['nomeFregistro']; ?>" readonly>
                 </div>
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">EMEC FAC REGISTRO</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">EMEC FAC REGISTRO</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="emecregistro" value="<?php echo $ListarRegistros[0]['emecFregistro']; ?>" readonly>
                 </div>
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">Data Inicial do curso</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Data Inicial do curso</label>
                     <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="datainicialCurso" value="<?php echo $ListarRegistros[0]['datainicialCurso']; ?>" readonly>
                 </div>
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">Data Final do curso</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Data Final do curso</label>
                     <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="datafinalCurso" value="<?php echo $ListarRegistros[0]['datafinalCurso']; ?>" readonly>
                 </div>
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">Registro do diploma</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Registro do diploma</label>
                     <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="dataregistroDiploma" value="<?php echo $ListarRegistros[0]['dataregistroDiploma']; ?>" readonly>
                 </div>
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">Data da Colação</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Data da Colação</label>
                     <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="dataColacao" value="<?php echo $ListarRegistros[0]['dataColacao']; ?>" readonly>
                 </div>
                 <div class="col-md-4">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">data do Registro no Dou</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">data do Registro no Dou</label>
                     <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="dataRegistroDou" value="<?php echo $ListarRegistros[0]['dataRegistroDou']; ?>" readonly>
                 </div>
                 <div class="col-md-4">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">número do processo</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">número do processo</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="numeroProcesso" value="<?php echo $ListarRegistros[0]['processoNumero']; ?>" readonly>
                 </div>
                 <div class="col-md-4">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">número do registro do diploma</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">número do registro do diploma</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="registroDiplomaNumero" value="<?php echo $ListarRegistros[0]['registroDiplomaNumero']; ?>" readonly>
                 </div>
                 <div class="col-md-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">número do livro</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">número do livro</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="numLivro" value="<?php echo $ListarRegistros[0]['numeroLivro']; ?>" readonly>
                 </div>
                 <div class="col-md-3">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase ">Número da folha</label>
+                    <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Número da folha</label>
                     <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="numFolha" value="<?php echo $ListarRegistros[0]['numeroFolha']; ?>" readonly>
                 </div>
                 <div class="col-md-12">

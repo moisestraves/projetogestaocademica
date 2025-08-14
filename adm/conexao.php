@@ -1,9 +1,10 @@
 <?php
 
+
 $servidor="localhost";
-$usuario="suportefamp";
-$senha="famp@2021";
-$banco="fampacademico";
+$usuario="gen01";
+$senha="RR5KzlpPLzizEZXr";
+$banco="genesis";
 
 
 //Conectando com o servidor

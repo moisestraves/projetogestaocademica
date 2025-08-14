@@ -6,9 +6,7 @@ if (empty($_SESSION['id'])) {
 
   header('location:index.php');
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,7 +21,6 @@ if (empty($_SESSION['id'])) {
 
 <body>
 
-
   <div class="container">
 
     <div class="form">
@@ -32,79 +29,65 @@ if (empty($_SESSION['id'])) {
           <p class="text-center">Formulário de Registro do Diploma</p>
         </section>
 
-        <div class="col-md-12">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Nome</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="nomedoaluno" placeholder="NOME DO ALUNO" required>
+        <div class="col-md-6">
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Nome Completo</label>
+          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="nomedoaluno" placeholder="João da Feliz" required>
         </div>
         <div class="col-md-3">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">RG</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" placeholder="RG DO ALUNO" required>
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">RG</label>
+          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" placeholder="220.400.720-45" required>
         </div>
-        <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">curso</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="curso" placeholder="NOME DO CURSO" required>
-        </div>
-
         <div class="col-md-3">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">EMEC</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="emeccurso" placeholder="NÙMERO DE REGISTRO EMEC" required>
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">CPF</label>
+          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" placeholder="25.400.620-45" required>
         </div>
         <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Faculdade Expedição</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="facexp" placeholder="FACULDADE EXP/DIPLOMA" required>
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Nome do Curso</label>
+          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="curso" placeholder="Gestão de RH" required>
         </div>
 
         <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">EMEC EXPEDIÇÃO</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="emecFexp" placeholder="EMEC FACULDADE EXPEDIÇÃO" required>
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Código E-mec do Curso</label>
+          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="emeccurso" placeholder="Código E-mec do Curso" required>
         </div>
+
         <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Faculdade Registro</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="facregistro" placeholder="FACULDADE REGISTRO DIPLOMA" required>
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Instituição de Ensino Expedidora</label>
+          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="facexp" placeholder="Instituição de Ensino Expedidora" required>
         </div>
+
         <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">EMEC FAC REGISTRO</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="emecregistro" placeholder="EMEC DA FACULDADE QUE REGISTROU O DIPLOMA" required>
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Instituição de Registradora</label>
+          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="emecFexp" placeholder="Instituição de Registradora" required>
         </div>
-        <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Data Inicial do curso</label>
+        
+        <div class="col-md-3">
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Ingresso no Curso</label>
+          <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="emecregistro" placeholder="Ingresso no Curso" required>
+        </div>
+        <div class="col-md-3">
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Conclusão do Curso</label>
           <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="datainicialCurso" required>
         </div>
-        <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Data Final do curso</label>
+        <div class="col-md-3">
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Data de Expedição</label>
           <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="datafinalCurso" required>
         </div>
-        <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Registro do diploma</label>
+        <div class="col-md-3">
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Data  de Registro</label>
           <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="dataregistroDiploma" required>
         </div>
-        <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Data da Colação</label>
+        <div class="col-md-3">
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Data de Expedição</label>
           <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="dataColacao" required>
         </div>
         <div class="col-md-4">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">data do Registro no Dou</label>
-          <input class="form-control form-control-sm" type="date" class="form-control" id="formGroupExampleInput" name="dataRegistroDou" required>
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Nº de Expedição</label>
+          <input class="form-control form-control-sm" type="number" class="form-control" id="formGroupExampleInput" name="dataRegistroDou" placeholder="Nº de Expedição"required>
         </div>
-        <div class="col-md-4">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">número do processo</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="numeroProcesso" required>
-        </div>
-        <div class="col-md-4">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">número do registro do diploma</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="registroDiplomaNumero" required>
-        </div>
-        <div class="col-md-6">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">número do livro</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="numLivro" required>
-        </div>
-        <div class="col-md-3">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Número da folha</label>
-          <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="numFolha" required>
-        </div>
-        <div class="col-md-12">
+        <div class="col-md-20">
           <input class="btn-sm btn-primary" type="submit" value="Cadastrar">
-          </div>
+         </div>
 
 
 
@@ -114,8 +97,6 @@ if (empty($_SESSION['id'])) {
 
     </div>
   </div>
-
-
 </body>
 
 </html>

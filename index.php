@@ -7,12 +7,12 @@ require 'topoadm.php';
 		<p>
 		<form action="validar-login.php" method="POST">
 			<div>
-				<input type="email" id="login" name="login" placeholder="Login">
+				<input type="email" id="login" name="login" placeholder="Login" required>
 			</div>
 			<div>
-				<input type="password" id="senha" name="senha" placeholder="Senha">
+				<input type="password" id="senha" name="senha" placeholder="Senha" required>
 			</div>
-			<button>Logar</button>
+			<button>Acessar</button>
 	</div>
 </div>
 </form>

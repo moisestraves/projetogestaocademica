@@ -31,19 +31,19 @@ if (empty($_SESSION['id'])) {
       <form class="row g-3" action="usuario.php" method="POST">
         <h5 class="text-center">Cadastrar Novo Usuário</h5>
         <div class="col-md-3">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Cpf</label>
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Cpf</label>
           <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="cpf" placeholder="Digite o CPF do Usuário" required>
         </div>
         <div class="col-md-4">
-          <label for="formGroupExampleInput" class="form-label text-uppercase ">Nome</label>
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Nome</label>
           <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="nomeusuario" placeholder="Nome do Usuário" required>
         </div>
         <div class="col-md-4">
-          <label for="formGroupExampleInput2" class="form-label text-uppercase">E-mail</label>
+          <label for="formGroupExampleInput2" class="form-label text-capitalize text-end fw-bold">E-mail</label>
           <input class="form-control form-control-sm" type="email" class="form-control" id="formGroupExampleInput2" name="email" placeholder="E-mail do Usuário" required>
         </div>
         <div class="col-md-4">
-          <label for="formGroupExampleInput2" class="form-label text-uppercase">Departamento</label>
+          <label for="formGroupExampleInput2" class="form-label text-capitalize text-end fw-bold">Departamento</label>
           <select name="departamento" class="form-select" aria-label="Default select example " required>
             <option selected>Departamento</option>
             <option value="Acadêmico"> Acadêmico </option>
@@ -56,7 +56,7 @@ if (empty($_SESSION['id'])) {
 
         </div>
         <div class="col-md-4">
-          <label for="formGroupExampleInput2" class="form-label text-uppercase">Ativar Usuário ?</label>
+          <label for="formGroupExampleInput2" class="form-label text-capitalize text-end fw-bold">Ativar Usuário ?</label>
           <select name="status" class="form-select" aria-label="Default select example" required>
             <option selected>Ativar Login</option>
             <option value="1">S</option>
@@ -65,7 +65,7 @@ if (empty($_SESSION['id'])) {
           </select>
         </div>
         <div class="col-md-3">
-          <label for="formGroupExampleInput2" class="form-label text-uppercase">Perfil ?</label>
+          <label for="formGroupExampleInput2" class="form-label text-capitalize text-end fw-bold">Perfil ?</label>
           <select name="perfil" class="form-select" aria-label="Default select example " required>
             <option selected>Tipo de Perfil</option>
             <option value="1">Administrador</option>
@@ -74,7 +74,7 @@ if (empty($_SESSION['id'])) {
           </select>
         </div>
         <div class="col-md-3">
-          <label for="formGroupExampleInput2" class="form-label text-uppercase">Senha</label>
+          <label for="formGroupExampleInput2" class="form-label text-capitalize text-end fw-bold">Senha</label>
           <input class="form-control form-control-sm" type="password" class="form-control" id="formGroupExampleInput2" name="senha" placeholder="Senha" required>
 
         </div>
