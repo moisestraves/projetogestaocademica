@@ -26,17 +26,17 @@ if (empty($_SESSION['id'])) {
     <div class="form">
       <form class="row g-3" action="adm/processa-cadastro-diploma.php" method="POST">
         <section class="test">
-          <p class="text-center">Formulário de Registro do Diploma</p>
+          <p class="text-center">Cadastro de Diploma</p>
         </section>
 
         <div class="col-md-6">
           <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Nome Completo</label>
           <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="nomedoaluno" placeholder="João da Feliz" required>
         </div>
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
           <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">RG</label>
           <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" placeholder="220.400.720-45" required>
-        </div>
+        </div> -->
         <div class="col-md-3">
           <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">CPF</label>
           <input class="form-control form-control-sm" type="text" class="form-control" id="formGroupExampleInput" name="doc" placeholder="25.400.620-45" required>
@@ -83,6 +83,14 @@ if (empty($_SESSION['id'])) {
         </div>
         <div class="col-md-4">
           <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Nº de Expedição</label>
+          <input class="form-control form-control-sm" type="number" class="form-control" id="formGroupExampleInput" name="dataRegistroDou" placeholder="Nº de Expedição"required>
+        </div>
+        <div class="col-md-4">
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Nº de Registro</label>
+          <input class="form-control form-control-sm" type="number" class="form-control" id="formGroupExampleInput" name="dataRegistroDou" placeholder="Nº de Expedição"required>
+        </div>
+        <div class="col-md-4">
+          <label for="formGroupExampleInput" class="form-label text-capitalize text-end fw-bold ">Data de Publicação DOU:</label>
           <input class="form-control form-control-sm" type="number" class="form-control" id="formGroupExampleInput" name="dataRegistroDou" placeholder="Nº de Expedição"required>
         </div>
         <div class="col-md-20">
